@@ -1,5 +1,6 @@
 # filters-and-texture-analysis
 GAUSSION BLUR
+
 Gaussian blur is a common image processing technique used to reduce noise, smooth textures, or achieve certain artistic effects. It works by applying a Gaussian function to each pixel in an image, blending each pixel with its neighbors based on a bell-shaped curve (the Gaussian function) to create a smoothing effect.
 
 Key Points:
