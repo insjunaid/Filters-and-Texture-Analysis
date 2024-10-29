@@ -63,6 +63,7 @@ Display the Spectrum: The magnitude spectrum can then be visualized to interpret
 
 
 NON MAXIMUM SUPPRESSION
+
 Non-Maximum Suppression (NMS) is a technique often used in image processing and computer vision to retain only the most significant features in an image, typically after edge or object detection. Its purpose is to thin out detected edges or overlapping bounding boxes by keeping only the most prominent ones, discarding weaker or redundant detections. NMS is commonly used in edge detection algorithms like the Canny Edge Detector and in object detection pipelines to filter out redundant bounding boxes.
 
 How Non-Maximum Suppression Works:
