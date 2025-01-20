@@ -1,9 +1,9 @@
 # Filters-and-Texture-Analysis
-GAUSSION BLUR
+## GAUSSION BLUR
 
 Gaussian blur is a common image processing technique used to reduce noise, smooth textures, or achieve certain artistic effects. It works by applying a Gaussian function to each pixel in an image, blending each pixel with its neighbors based on a bell-shaped curve (the Gaussian function) to create a smoothing effect.
 
-Key Points:
+### Key Points:
 Gaussian Function: The Gaussian function is used to create a weight matrix, where each pixel’s influence decreases with distance from the center. The result is a smooth transition between pixels.
 
 Kernel Size: The size of the Gaussian kernel (e.g., 3x3, 5x5) determines the blur’s radius. A larger kernel leads to a more intense blur since more surrounding pixels influence each pixel.
@@ -12,45 +12,46 @@ Sigma (Standard Deviation): Sigma controls the spread of the Gaussian function. 
 
 Applications: Gaussian blur is widely used in image preprocessing, graphics design, computer vision, and video processing, especially to remove detail or soften an image.
 
-GABOR FILTERS
+## GABOR FILTERS
 
 Gabor filters are commonly used in image processing for texture analysis, feature extraction, and edge detection. They are particularly effective for detecting specific orientations and spatial frequencies in an image, making them useful for applications like face and iris recognition, fingerprint analysis, and texture-based image segmentation.
 
-Key Characteristics of Gabor Filters:
+### Key Characteristics of Gabor Filters:
 Structure: A Gabor filter is a combination of a Gaussian function (for spatial localization) and a sinusoidal wave (for orientation and frequency selectivity). This dual nature allows it to capture both spatial and frequency information, effectively detecting edges or textures in a specific direction.
 
-Parameters:
+### Parameters:
 
-Wavelength (λ): Controls the spatial frequency of the sinusoidal function. A smaller wavelength detects finer details, while a larger wavelength detects broader features.
-Orientation (θ): Specifies the angle of the sinusoidal wave, allowing the filter to detect edges or features at specific angles.
-Phase Offset (φ): Shifts the sinusoidal function along its wave, affecting how the filter responds to light and dark regions.
-Aspect Ratio (γ): Defines the spatial aspect ratio and controls the "elongation" of the filter. Higher values focus on a more elongated shape, and lower values make it more circular.
-Standard Deviation (σ): Determines the Gaussian envelope's width, affecting the filter’s spatial locality.
-Applications:
+### Wavelength (λ): Controls the spatial frequency of the sinusoidal function. A smaller wavelength detects finer details, while a larger wavelength detects broader features.
+### Orientation (θ): Specifies the angle of the sinusoidal wave, allowing the filter to detect edges or features at specific angles.
+### Phase Offset (φ): Shifts the sinusoidal function along its wave, affecting how the filter responds to light and dark regions.
+### Aspect Ratio (γ): Defines the spatial aspect ratio and controls the "elongation" of the filter. Higher values focus on a more elongated shape, and lower values make it more circular.
+### Standard Deviation (σ): Determines the Gaussian envelope's width, affecting the filter’s spatial locality.
 
-Texture Analysis: Detects textures in specific orientations and scales.
-Feature Extraction: Useful in extracting features in image recognition tasks.
-Edge Detection: Highlights edges aligned with the filter's orientation.
-Image Segmentation: Helps separate regions with distinct textures or patterns.
+### Applications:
 
-LAPLACIAN EDGE DETECTION
+### Texture Analysis: Detects textures in specific orientations and scales.
+### Feature Extraction: Useful in extracting features in image recognition tasks.
+### Edge Detection: Highlights edges aligned with the filter's orientation.
+### Image Segmentation: Helps separate regions with distinct textures or patterns.
+
+## LAPLACIAN EDGE DETECTION
 
 Laplacian edge detection is an image processing technique that highlights regions of rapid intensity change, allowing us to detect edges in an image. It is based on the second derivative of the image intensity, using the Laplacian operator to find areas where the intensity shifts abruptly, which typically correspond to edges.
 
-Key Points of Laplacian Edge Detection:
-Laplacian Operator: The Laplacian operator calculates the second derivative of an image, measuring how fast intensity values change in each direction. Unlike the Sobel filter, which considers both horizontal and vertical edges separately, the Laplacian operator works in all directions at once.
+### Key Points of Laplacian Edge Detection:
+### Laplacian Operator: The Laplacian operator calculates the second derivative of an image, measuring how fast intensity values change in each direction. Unlike the Sobel filter, which considers both horizontal and vertical edges separately, the Laplacian operator works in all directions at once.
 
-Kernel: The Laplacian operator uses a convolutional kernel to compute the Laplacian of the image. 
-Result: Since the Laplacian detects changes in intensity, the result will highlight the edges as areas of high contrast. However, this method is sensitive to noise, so applying Gaussian smoothing beforehand can help reduce noise and produce cleaner edges.
+### Kernel: The Laplacian operator uses a convolutional kernel to compute the Laplacian of the image. 
+### Result: Since the Laplacian detects changes in intensity, the result will highlight the edges as areas of high contrast. However, this method is sensitive to noise, so applying Gaussian smoothing beforehand can help reduce noise and produce cleaner edges.
 
-Applications: Laplacian edge detection is widely used for object detection, feature extraction, and various image analysis tasks, where finding the boundaries of objects is essential.
+### Applications: Laplacian edge detection is widely used for object detection, feature extraction, and various image analysis tasks, where finding the boundaries of objects is essential.
 
 Steps to Apply Laplacian Edge Detection
 Optional Gaussian Blur: Apply a Gaussian blur to reduce noise.
 Apply Laplacian Operator: Convolve the image with the Laplacian kernel to detect edges.
 Thresholding (Optional): Apply a threshold to the result to create a binary edge map.
 
-MAGNITUDE SPECTRUM
+## MAGNITUDE SPECTRUM
 
 The magnitude spectrum of an image represents the frequency content within the image, showing the strength (magnitude) of various frequency components. By transforming an image from the spatial domain to the frequency domain, you can analyze patterns, textures, or repetitive structures that might not be evident in the original image. The magnitude spectrum is often obtained using the Discrete Fourier Transform (DFT).
 
@@ -62,12 +63,12 @@ Compute the Magnitude Spectrum: Calculate the magnitude by taking the logarithm 
 Display the Spectrum: The magnitude spectrum can then be visualized to interpret the frequency content of the image.
 
 
-NON MAXIMUM SUPPRESSION
+## NON MAXIMUM SUPPRESSION
 
 Non-Maximum Suppression (NMS) is a technique often used in image processing and computer vision to retain only the most significant features in an image, typically after edge or object detection. Its purpose is to thin out detected edges or overlapping bounding boxes by keeping only the most prominent ones, discarding weaker or redundant detections. NMS is commonly used in edge detection algorithms like the Canny Edge Detector and in object detection pipelines to filter out redundant bounding boxes.
 
-How Non-Maximum Suppression Works:
-Gradient Magnitude and Direction:
+### How Non-Maximum Suppression Works:
+### Gradient Magnitude and Direction:
 
 After applying an edge detection filter (like Sobel), you obtain the gradient magnitude and direction at each pixel. These values indicate the intensity and orientation of edges.
 Suppress Non-Maximal Values:
